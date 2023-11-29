@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,400;0,500;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Roboto Mono', monospace;
+        }
+        .container_box {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: flex-start;
+            justify-content: center;
+            padding-left: 18px;
+            padding-right: 18px;
+        }
+        .box h4 {
+          display: block;
+          background: #ddd;
+          width: 100%;
+          margin-top: 7px;
+          padding: 3px;
+          color: #5c5b5b;
+        }
+        .box {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: flex-start;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .box span {
+            border: 1px solid #ccc;
+            margin-top: 5px;
+            width: 100%;
+        }
+       
+        .get {
+            background: #8bc34a;
+            color: #fff;
+            padding-left: 3px;
+            padding-right: 9px;
+            margin-right: 5px;
+        }
+        .post {
+            background: #c34a4e;
+            color: #fff;
+            padding-left: 3px;
+            padding-right: 9px;
+            margin-right: 5px;
+        }
+        .chave {
+            color:#fff;
+            border: none !important;
+        }
+        .prettyprint b {
+            color:#ffc107; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container_box">
+        <div class="box">
+            <h4>Pessoas</h4> 
+            <div class="accordion" id="accordionFlushExample" style="width: 100%;" >
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#PessoaOne" aria-expanded="false" aria-controls="PessoaOne">
+                        <b class="get">GET</b>/pessoas/listar
+                    </button>
+                  </h2>
+                  <div id="PessoaOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                            <code class="prettyprint">
+                              {
+                                "status": "success",
+                                "data": {
+                                    "paginacao": {
+                                        "pagiana_atual": 1,
+                                        "total_pagina": 1,
+                                        "total": "6"
+                                    },
+                                    "result": [
+                                        {
+                                            "id": "22",
+                                            "nome": "Usuario admin",
+                                            "email": "guardiaot@gmail.com",
+                                            "celular": "(16) 98100-9191",
+                                            "celular2": "16 34",
+                                            "telefone": null,
+                                            "endereco": "Av 2",
+                                            "numero": "1502",
+                                            "complemento": null,
+                                            "bairro": "centro",
+                                            "cep": "14620-000",
+                                            "cidade": "Orlandia",
+                                            "estado": "SP",
+                                            "cpf_cnpj": "303.302.078.06",
+                                            "rg_ie": null,
+                                            "observacao": null,
+                                            "susep": "145552",
+                                            "tipo_pessoa": "U",
+                                            "ip": "127.0.0.1",
+                                            "data_now": null,
+                                            "id_usuario_now": null
+                                        },
+                                        {
+                                           .....
+                                        },
+                                        {
+                                           .....
+                                        }
+                                    ],
+                                    "navegacao": {
+                                        "link": [
+                                            {
+                                                "url": "pag=1",
+                                                "label": 1,
+                                                "active": "disabled"
+                                            }
+                                        ],
+                                        "from": 25,
+                                        "per_page": 25,
+                                        "total": "6"
+                                    }
+                                }
+                            }
+                            </code>
+                        </pre> 
+            
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#PessoaTwo" aria-expanded="false" aria-controls="PessoaTwo">
+                        <b class="get">GET</b>/pessoas/listar-pessoaId/Codigo_pessoa
+                    </button>
+                  </h2>
+                  <div id="PessoaTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        
+                        <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                            <code class="prettyprint">
+                              {
+                                "status": "success",
+                                "data": {
+                                    "id": "22",
+                                    "nome": "Usuario admin",
+                                    "email": "guardiaot@gmail.com",
+                                    "celular": "(16) 98100-9191",
+                                    "celular2": "16 34",
+                                    "telefone": null,
+                                    "endereco": "Av 2",
+                                    "numero": "1502",
+                                    "complemento": null,
+                                    "bairro": "centro",
+                                    "cep": "14620-000",
+                                    "cidade": "Orlandia",
+                                    "estado": "SP",
+                                    "cpf_cnpj": "303.302.078.06",
+                                    "rg_ie": null,
+                                    "observacao": null,
+                                    "susep": "145552",
+                                    "tipo_pessoa": "U",
+                                    "ip": "127.0.0.1",
+                                    "data_now": null,
+                                    "id_usuario_now": null
+                                }
+                            }
+                            </code>
+                        </pre> 
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#PessoaThree" aria-expanded="false" aria-controls="PessoaThree">
+                        <b class="get">GET</b>/pessoas/listar-produtos-pessoaId/Codigo_pessoa
+                    </button>
+                  </h2>
+                  <div id="PessoaThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                            <code class="prettyprint">
+                              {
+                                "status": "success",
+                                "data": {
+                                    "pessoa": {
+                                        "id": "23",
+                                        "nome": "Cliente de teste DB2",
+                                        "email": "guardiaot@gmail.com",
+                                        "celular": "(16) 98100-9191",
+                                        "celular2": "16 34",
+                                        "telefone": null,
+                                        "endereco": "Av 2",
+                                        "numero": "1502",
+                                        "complemento": null,
+                                        "bairro": "centro",
+                                        "cep": "14620-000",
+                                        "cidade": "Orlandia",
+                                        "estado": "SP",
+                                        "cpf_cnpj": "303.302.078.06",
+                                        "rg_ie": null,
+                                        "observacao": null,
+                                        "susep": "145552",
+                                        "tipo_pessoa": "S",
+                                        "ip": "127.0.0.1",
+                                        "data_now": "2022-09-02 20:09:52",
+                                        "id_usuario_now": null
+                                    },
+                                    "seguradoras": [],
+                                    "seguradoras_produtos": [],
+                                    "api_seguradoras": []
+                                }
+                            }
+                            </code>
+                        </pre> 
+            
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFor">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#PessoaFor" aria-expanded="false" aria-controls="PessoaFor">
+                        <b class="post">POST</b>/pessoas/cadastrar-pessoa
+                      </button>
+                    </h2>
+                    <div id="PessoaFor" class="accordion-collapse collapse" aria-labelledby="flush-headingFor" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                            <code class="prettyprint">
+                            </code>
+                        </pre> 
+              
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFive">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#PessoaFive" aria-expanded="false" aria-controls="PessoaFive">
+                        <b class="post">POST</b>/pessoas/editar-pessoa
+                      </button>
+                    </h2>
+                    <div id="PessoaFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                            <code class="prettyprint">
+                            </code>
+                        </pre> 
+              
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingSix">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#PessoaSix" aria-expanded="false" aria-controls="PessoaSix">
+                        <b class="get">GET</b>/pessoas/delete-pessoa
+                      </button>
+                    </h2>
+                    <div id="PessoaSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                          
+                        <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                            <code class="prettyprint">
+                            </code>
+                        </pre> 
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingSeven">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#PessoaSeven" aria-expanded="false" aria-controls="PessoaSeven">
+                        <b class="get">GET</b>/pessoas/lista-filtros?busca=Cliente (nome, email, id, celular, cpf,cnpj)
+                      </button>
+                    </h2>
+                    <div id="PessoaSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                          
+                        <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                            <code class="prettyprint">
+                              {
+                                "status": "success",
+                                "data": [
+                                    {
+                                        "id": "23",
+                                        "nome": "Cliente de teste DB2",
+                                        "email": "guardiaot@gmail.com",
+                                        "celular": "(16) 98100-9191",
+                                        "celular2": "16 34",
+                                        "telefone": null,
+                                        "endereco": "Av 2",
+                                        "numero": "1502",
+                                        "complemento": null,
+                                        "bairro": "centro",
+                                        "cep": "14620-000",
+                                        "cidade": "Orlandia",
+                                        "estado": "SP",
+                                        "cpf_cnpj": "303.302.078.06",
+                                        "rg_ie": null,
+                                        "observacao": null,
+                                        "susep": "145552",
+                                        "tipo_pessoa": "S",
+                                        "ip": "127.0.0.1",
+                                        "data_now": "2022-09-02 20:09:52",
+                                        "id_usuario_now": null,
+                                        "path": "arquivos/pessoas/2022/08/23/f_137648_1661353313.jpg",
+                                        "imagens": "f_137648.jpg"
+                                    }
+                                ]
+                            }
+                            </code>
+                        </pre> 
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingEigth">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#PessoaEigth" aria-expanded="false" aria-controls="PessoaEigth">
+                        <b class="get">GET</b>/pessoas/listar-tipo-pessoa?tipo_pessoa=c ( C = cliente, U = usuario , S = seguradora)
+                      </button>
+                    </h2>
+                    <div id="PessoaEigth" class="accordion-collapse collapse" aria-labelledby="flush-headingEigth" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                            <code class="prettyprint">
+                              {
+                                "status": "success",
+                                "data": [
+                                    {
+                                        "id": "37",
+                                        "nome": "Jorge Godinho Antonio",
+                                        "email": "jagodinho",
+                                        "celular": "(16)98100-9199",
+                                        "celular2": null,
+                                        "telefone": null,
+                                        "endereco": "Avenida 2",
+                                        "numero": "1502",
+                                        "complemento": null,
+                                        "bairro": "Centro",
+                                        "cep": "14620-000",
+                                        "cidade": "Orlandia",
+                                        "estado": "SP",
+                                        "cpf_cnpj": "255.721.398.58",
+                                        "rg_ie": "29.854.580-9",
+                                        "observacao": "teste",
+                                        "susep": null,
+                                        "tipo_pessoa": "C",
+                                        "ip": "127.0.0.1",
+                                        "data_now": "2022-09-01 13:09:02",
+                                        "id_usuario_now": null
+                                    }
+                                ]
+                            }
+                            </code>
+                        </pre> 
+              
+                      </div>
+                    </div>
+                  </div>
+              </div>
+        </div>
+        
+        <div class="box">
+            <h4>Seguradora</h4>
+            <div class="accordion" id="accordionFlushExample" style="width: 100%;">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="SeguradoraZero">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#seguradora_Zero" aria-expanded="false" aria-controls="seguradora_Zero">
+                    <b class="get">GET</b>/seguradora/listar
+                  </button>
+                </h2>
+                <div id="seguradora_Zero" class="accordion-collapse collapse" aria-labelledby="SeguradoraZero" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                      <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                          <code class="prettyprint">
+                            {
+                              "status": "success",
+                              "data":"data": [
+                              {
+                                  "id": "1",
+                                  "id_pessoa": "1",
+                                  "ip": "127.0.0.1",
+                                  "data_now": "2022-07-27 15:07:40",
+                                  "id_usuario_now": "2"
+                              },{
+                                ........
+                              }
+                          }
+                          </code>
+                      </pre> 
+          
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="SeguradoraOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#seguradora_One" aria-expanded="false" aria-controls="seguradora_One">
+                    <b class="get">GET</b>/seguradora/listarId/2
+                  </button>
+                </h2>
+                <div id="seguradora_One" class="accordion-collapse collapse" aria-labelledby="SeguradoraOne" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                      <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                          <code class="prettyprint">
+                            {
+                              "status": "success",
+                              "data": {
+                                  "paginacao": {
+                                      "pagiana_atual": 1,
+                                      "total_pagina": 1,
+                                      "total": "2"
+                                  },
+                                  "result": [
+                                      {
+                                          "id": "2",
+                                          "nome": "NOME - API",
+                                          "homologacao": "S",
+                                          "json": "arquivos/pessoas/json/20220902131662132317_dado.json",
+                                          "id_seguradora_produto": "3",
+                                          "pessoas": {
+                                              "id": "3",
+                                              "nome": "NOME SEGUROS GERAIS S.A.",
+                                              "email": "TRIBUTOS@NOME.COM.BR",
+                                              "celular": "(16) 98100-3563",
+                                              "celular2": null,
+                                              "telefone": null,
+                                              "endereco": "AV DAS NACOES UNIDAS",
+                                              "numero": "14261",
+                                              "complemento": "ANDAR 17 AO 21 ALA A",
+                                              "bairro": "VILA GERTRUDES",
+                                              "cep": "04794-000",
+                                              "cidade": "SAO PAULO",
+                                              "estado": "SP",
+                                              "cpf_cnpj": "255.721.398-24",
+                                              "rg_ie": "29.585.665-5",
+                                              "observacao": "testestestestse",
+                                              "susep": "123456",
+                                              "tipo_pessoa": "S",
+                                              "ip": "127.0.0.1",
+                                              "data_now": "2022-09-01 14:09:23",
+                                              "id_usuario_now": null
+                                          }
+                                      },
+                                      {
+                                        .......
+                                      }
+                                  ],
+                                  "navegacao": {
+                                      "link": [
+                                          {
+                                              "url": "pag=1",
+                                              "label": 1,
+                                              "active": "disabled"
+                                          }
+                                      ],
+                                      "from": 25,
+                                      "per_page": 25,
+                                      "total": "2"
+                                  }
+                              }
+                          }
+                          </code>
+                      </pre> 
+          
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="SeguradoraTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#seguradora_Two" aria-expanded="false" aria-controls="seguradora_Two">
+                    <b class="get">GET</b>/seguradora/deletar-seguradora
+                  </button>
+                </h2>
+                <div id="seguradora_Two" class="accordion-collapse collapse" aria-labelledby="SeguradoraTwo" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                      
+                      <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                          <code class="prettyprint">
+                          </code>
+                      </pre> 
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="SeguradoraThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#seguradora_Three" aria-expanded="false" aria-controls="seguradora_Three">
+                    <b class="post">POST</b>/seguradora/atualizar-seguradora
+                  </button>
+                </h2>
+                <div id="seguradora_Three" class="accordion-collapse collapse" aria-labelledby="SeguradoraThree" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                      <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                          <code class="prettyprint">
+                          </code>
+                      </pre> 
+          
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="SeguradoraFor">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#seguradora_For" aria-expanded="false" aria-controls="seguradora_For">
+                      <b class="post">POST</b>/seguradora/cadastro-seguradora
+                    </button>
+                  </h2>
+                  <div id="seguradora_For" class="accordion-collapse collapse" aria-labelledby="SeguradoraFor" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                          <code class="prettyprint">
+                          </code>
+                      </pre> 
+            
+                    </div>
+                  </div>
+                </div>
+            </div>            
+        </div>
+
+        <div class="box">
+            <h4>Seguradora produto</h4>    
+            <div class="accordion" id="accordionFlushExample" style="width: 100%;">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="ProdutoOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Produto_One" aria-expanded="false" aria-controls="Produto_One">
+                    <b class="get">GET</b>/produto/listar
+                  </button>
+                </h2>
+                <div id="Produto_One" class="accordion-collapse collapse" aria-labelledby="ProdutoOne" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                      <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                          <code class="prettyprint">
+                            {
+                              "status": "success",
+                              "data": {
+                                  "paginacao": {
+                                      "pagiana_atual": 1,
+                                      "total_pagina": 1,
+                                      "total": "6"
+                                  },
+                                  "result": [
+                                      {
+                                          "id": "1",
+                                          "id_seguradora": "1",
+                                          "nome": "SEGURO FIANÇA - NOME",
+                                          "ip": "127.0.0.1",
+                                          "data_now": "2022-08-19 16:52:33",
+                                          "id_usuario_now": "2"
+                                      },
+                                      {
+                                        ....
+                                      },
+                                      {
+                                         ....
+                                      },
+                                      {
+                                         ....
+                                      },
+                                      .
+                                  ],
+                                  "navegacao": {
+                                      "link": [
+                                          {
+                                              "url": "pag=1",
+                                              "label": 1,
+                                              "active": "disabled"
+                                          }
+                                      ],
+                                      "from": 25,
+                                      "per_page": 25,
+                                      "total": "6"
+                                  }
+                              }
+                          }
+                          </code>
+                      </pre> 
+          
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="ProdutoTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Produto_Two" aria-expanded="false" aria-controls="Produto_Two">
+                    <b class="get">GET</b>/produto/listar-produtos-pessoas
+                  </button>
+                </h2>
+                <div id="Produto_Two" class="accordion-collapse collapse" aria-labelledby="ProdutoTwo" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                      
+                      <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                          <code class="prettyprint">
+                            {
+                              "status": "success",
+                              "data": {
+                                  "paginacao": {
+                                      "pagiana_atual": 1,
+                                      "total_pagina": 1,
+                                      "total": "6"
+                                  },
+                                  "result": [
+                                      {
+                                          "id": "23",
+                                          "nome": "Cliente de teste DB2",
+                                          "email": "guardiaot@gmail.com",
+                                          "celular": "(16) 98100-9191",
+                                          "celular2": "16 34",
+                                          "telefone": null,
+                                          "endereco": "Av 2",
+                                          "numero": "1502",
+                                          "complemento": null,
+                                          "bairro": "centro",
+                                          "cep": "14620-000",
+                                          "cidade": "Orlandia",
+                                          "estado": "SP",
+                                          "cpf_cnpj": "303.302.078.06",
+                                          "rg_ie": null,
+                                          "observacao": null,
+                                          "path": "arquivos/pessoas/2022/08/23/f_137648_1661353313.jpg",
+                                          "imagens": "f_137648.jpg",
+                                          "susep": "145552",
+                                          "tipo_pessoa": "S",
+                                          "produtos": [
+                                              {
+                                                  "id": "3",
+                                                  "nome": "SEGURO RESIDÊNCIA - NOME"
+                                              },
+                                              {
+                                                  "id": "4",
+                                                  "nome": "PROTEÇÃO IMOBILIÁRIA - NOME"
+                                              }
+                                          ],
+                                          "api_seguradora": [
+                                              {
+                                                  "id": "3",
+                                                  "id_pessoa": "3",
+                                                  "nome": "SEGURO RESIDÊNCIA - NOME",
+                                                  "json": "arquivos/pessoas/json/20220902131662132317_dado.json"
+                                              },
+                                              {
+                                                  "id": "4",
+                                                  "id_pessoa": "3",
+                                                  "nome": "PROTEÇÃO IMOBILIÁRIA - NOME",
+                                                  "json": "arquivos/pessoas/json/2022090271662132340_dado.json"
+                                              }
+                                          ],
+                                          "codigo_susep": [{
+                                              "susep": "125314",
+                                              "id": "1"
+                                           }
+                                        ]
+                                      },
+                                      {
+                                         ....
+                                      },
+                                      {
+                                         .... 
+                                      },
+                                      {
+                                         ....                                        
+                                      },
+                                      
+                                  ],
+                                  "navegacao": {
+                                      "link": [
+                                          {
+                                              "url": "pag=1",
+                                              "label": 1,
+                                              "active": "disabled"
+                                          }
+                                      ],
+                                      "from": 25,
+                                      "per_page": 25,
+                                      "total": "6"
+                                  }
+                              }
+                          }
+                          </code>
+                      </pre> 
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="ProdutoThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Produto_Three" aria-expanded="false" aria-controls="Produto_Three">
+                    <b class="get">GET</b>/produto/listar-produtos-pessoaId/1
+                  </button>
+                </h2>
+                <div id="Produto_Three" class="accordion-collapse collapse" aria-labelledby="ProdutoThree" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                      <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                          <code class="prettyprint">
+                            {
+                              "status": "success",
+                              "data": [
+                                  {
+                                      "id": "2",
+                                      "id_pessoa": "2",
+                                      "ip": "127.0.0.1",
+                                      "data_now": "2022-09-01 15:09:40",
+                                      "id_usuario_now": "2",
+                                      "id_seguradora": "2",
+                                      "nome": "SEGURO RESIDÊNCIA - Nome"
+                                  },
+                                  {
+                                      "id": "11",
+                                      "id_pessoa": "2",
+                                      "ip": "127.0.0.1",
+                                      "data_now": "2022-08-24 18:23:26",
+                                      "id_usuario_now": "2",
+                                      "id_seguradora": "11",
+                                      "nome": "PROTEÇÃO IMOBILIÁRIA - Nome DB2"
+                                  }
+                              ]
+                          }
+                          </code>
+                      </pre> 
+          
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="ProdutoFor">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Produto_For" aria-expanded="false" aria-controls="Produto_For">
+                      <b class="get">GET</b>/produto/listar-produtosId/1
+                    </button>
+                  </h2>
+                  <div id="Produto_For" class="accordion-collapse collapse" aria-labelledby="ProdutoFor" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                          <code class="prettyprint">
+                            {
+                              "status": "success",
+                              "data": {
+                                  "seguradora_produto": [
+                                      {
+                                          "id": "1",
+                                          "id_seguradora": "1",
+                                          "nome": "SEGURO FIANÇA - Nome",
+                                          "ip": "127.0.0.1",
+                                          "data_now": "2022-08-19 16:52:33",
+                                          "id_usuario_now": "2"
+                                      }
+                                  ],
+                                  "api_seguradoras": [],
+                                  "seg_corretor_susep": {
+                                      "susep": "125314",
+                                      "id": "1"
+                                  }
+                              }
+                          }
+                          </code>
+                      </pre> 
+            
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="ProdutoFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Produto_Five" aria-expanded="false" aria-controls="Produto_Five">
+                      <b class="get">GET</b>/produto/deletar-produtos
+                    </button>
+                  </h2>
+                  <div id="Produto_Five" class="accordion-collapse collapse" aria-labelledby="ProdutoFive" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                          <code class="prettyprint">
+                          </code>
+                      </pre> 
+            
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="ProdutoSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Produto_Six" aria-expanded="false" aria-controls="Produto_Six">
+                      <b class="get">GET</b>/produto/listar-produtos-por-tipo-pessoas
+                    </button>
+                  </h2>
+                  <div id="Produto_Six" class="accordion-collapse collapse" aria-labelledby="ProdutoSix" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        
+                      <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                          <code class="prettyprint">
+                            {
+                              "status": "success",
+                              "data": {
+                                  "paginacao": {
+                                      "pagiana_atual": 1,
+                                      "total_pagina": 1,
+                                      "total": "6"
+                                  },
+                                  "result": [
+                                      {
+                                          "id": "23",
+                                          "nome": "Cliente de teste DB2",
+                                          "email": "guardiaot@gmail.com",
+                                          "celular": "(16) 98100-9191",
+                                          "celular2": "16 34",
+                                          "telefone": null,
+                                          "endereco": "Av 2",
+                                          "numero": "1502",
+                                          "complemento": null,
+                                          "bairro": "centro",
+                                          "cep": "14620-000",
+                                          "cidade": "Orlandia",
+                                          "estado": "SP",
+                                          "cpf_cnpj": "303.302.078.06",
+                                          "rg_ie": null,
+                                          "observacao": null,
+                                          "path": "",
+                                          "imagens": "f_137648.jpg",
+                                          "susep": "145552",
+                                          "tipo_pessoa": "S",
+                                          "produtos": [
+                                              {
+                                                  "id": "3",
+                                                  "nome": "SEGURO RESIDÊNCIA - MAPFRE"
+                                              },
+                                              {
+                                                  "id": "4",
+                                                  "nome": "PROTEÇÃO IMOBILIÁRIA - MAPFRE"
+                                              }
+                                          ],
+                                          "api_seguradora": [
+                                              {
+                                                  "id": "3",
+                                                  "id_pessoa": "3",
+                                                  "nome": "SEGURO RESIDÊNCIA - MAPFRE",
+                                                  "json": "arquivos/pessoas/json/20220902131662132317_dado.json"
+                                              },
+                                              {
+                                                  "id": "4",
+                                                  "id_pessoa": "3",
+                                                  "nome": "PROTEÇÃO IMOBILIÁRIA - MAPFRE",
+                                                  "json": "arquivos/pessoas/json/2022090271662132340_dado.json"
+                                              }
+                                          ],
+                                          "codigo_susep": [
+                                              {
+                                                "susep": "125314",
+                                                "id": "1"
+                                            }
+                                          ]
+                                      },
+                                      {
+                                         ....
+                                      },
+                                      {
+                                         .....
+                                      },
+                                      
+                                  ],
+                                  "navegacao": {
+                                      "link": [
+                                          {
+                                              "url": "pag=1",
+                                              "label": 1,
+                                              "active": "disabled"
+                                          }
+                                      ],
+                                      "from": 25,
+                                      "per_page": 25,
+                                      "total": "6"
+                                  }
+                              }
+                          }
+                          </code>
+                      </pre> 
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="ProdutoSeven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Produto_Seven" aria-expanded="false" aria-controls="Produto_Seven">
+                      <b class="post">POST</b>/produto/atualizar-produtos
+                    </button>
+                  </h2>
+                  <div id="Produto_Seven" class="accordion-collapse collapse" aria-labelledby="ProdutoSeven" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        
+                      <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                          <code class="prettyprint">
+                          </code>
+                      </pre> 
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="ProdutoEight">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Produto_Eight" aria-expanded="false" aria-controls="Produto_Eight">
+                      <b class="post">POST</b>/produto/cadastro-produtos
+                    </button>
+                  </h2>
+                  <div id="Produto_Eight" class="accordion-collapse collapse" aria-labelledby="ProdutoEight" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                          <code class="prettyprint">
+                          </code>
+                      </pre> 
+            
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <h4>Usuario</h4>    
+            <div class="accordion" id="accordionFlushExample" style="width: 100%;">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="UserOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#user_One" aria-expanded="false" aria-controls="user_One">
+                    <b class="get">GET</b>/user/listar
+                  </button>
+                </h2>
+                <div id="user_One" class="accordion-collapse collapse" aria-labelledby="UserOne" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                      <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                          <code class="prettyprint">
+                            {
+                              "status": "success",
+                              "data": {
+                                  "paginacao": {
+                                      "pagiana_atual": 1,
+                                      "total_pagina": 1,
+                                      "total": "6"
+                                  },
+                                  "result": [
+                                      {
+                                          "id": "2",
+                                          "id_pessoa": "22",
+                                          "usuario": "usuarioteste",
+                                          "password": "$2y$10$zs6iF81OcWQBsykc.K0gJueMWr/q9dI8yG.K1hopqxRjr9lQLmSkK",
+                                          "nivel": "C",
+                                          "status": "1",
+                                          "ip": "127.0.0.1",
+                                          "data_now": "2022-07-12 02:07:21",
+                                          "id_usuario_now": "3",
+                                          "remember_me_token": null,
+                                          "access_token": null
+                                      },
+                                      {
+                                         ....
+                                      },
+                                      {
+                                         .....
+                                      }
+                                      
+                                  ],
+                                  "navegacao": {
+                                      "link": [
+                                          {
+                                              "url": "pag=1",
+                                              "label": 1,
+                                              "active": "disabled"
+                                          }
+                                      ],
+                                      "from": 25,
+                                      "per_page": 25,
+                                      "total": "6"
+                                  }
+                              }
+                          }
+                          </code>
+                      </pre> 
+          
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="UserTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#user_Two" aria-expanded="false" aria-controls="user_Two">
+                    <b class="get">GET</b>/user/listar-usuario-e-pessoas
+                  </button>
+                </h2>
+                <div id="user_Two" class="accordion-collapse collapse" aria-labelledby="UserTwo" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                      
+                      <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                          <code class="prettyprint">
+                            {
+                              "status": "success",
+                              "data": {
+                                  "paginacao": {
+                                      "pagiana_atual": 1,
+                                      "total_pagina": 1,
+                                      "total": "6"
+                                  },
+                                  "result": [
+                                      {
+                                          "nome": "Usuario admin",
+                                          "id": "2",
+                                          "email": "guardiaot@gmail.com",
+                                          "usuario": "guardiaot",
+                                          "nivel": "C",
+                                          "status": "1",
+                                          "data_now": "2022-07-12 02:07:21"
+                                      },
+                                      {
+                                        .....
+                                      },
+                                      {
+                                         ......
+                                      }
+                                      
+                                  ],
+                                  "navegacao": {
+                                      "link": [
+                                          {
+                                              "url": "pag=1",
+                                              "label": 1,
+                                              "active": "disabled"
+                                          }
+                                      ],
+                                      "from": 25,
+                                      "per_page": 25,
+                                      "total": "6"
+                                  }
+                              }
+                          }
+                          </code>
+                      </pre> 
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="UserThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#user_Three" aria-expanded="false" aria-controls="user_Three">
+                    <b class="get">GET</b>/user/listar-usuarioId/1
+                  </button>
+                </h2>
+                <div id="user_Three" class="accordion-collapse collapse" aria-labelledby="UserThree" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                      <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                          <code class="prettyprint">
+                            {
+                              "status": "success",
+                              "data": {
+                                  "id": "2",
+                                  "id_pessoa": "22",
+                                  "usuario": "guardiaot",
+                                  "nivel": "C",
+                                  "status": "1"
+                              }
+                          }
+                          </code>
+                      </pre> 
+          
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="UserFor">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#user_For" aria-expanded="false" aria-controls="user_For">
+                      <b class="get">GET</b>/user/deletar-usuario
+                    </button>
+                  </h2>
+                  <div id="user_For" class="accordion-collapse collapse" aria-labelledby="UserFor" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                          <code class="prettyprint">
+                          </code>
+                      </pre> 
+            
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="UserFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#user_Five" aria-expanded="false" aria-controls="user_Five">
+                      <b class="post">POST</b>/user/cadastrar-usuario
+                    </button>
+                  </h2>
+                  <div id="user_Five" class="accordion-collapse collapse" aria-labelledby="UserFive" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                          <code class="prettyprint">
+                          </code>
+                      </pre> 
+            
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="UserSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                      <b class="post">POST</b>/user/atualizar-usuario
+                    </button>
+                  </h2>
+                  <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="UserSix" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                          <code class="prettyprint">
+                          </code>
+                      </pre> 
+            
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <h4>Login & Token</h4>     
+            <div class="accordion" id="accordionFlushExample" style="width: 100%;">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="LoginOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Login_One" aria-expanded="false" aria-controls="Login_One">
+                    <b class="post">POST</b>/login/logar
+                  </button>
+                </h2>
+                <div id="Login_One" class="accordion-collapse collapse" aria-labelledby="LoginOne" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                      <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                          <code class="prettyprint">
+                          </code>
+                      </pre> 
+          
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="LoginTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Login_Two" aria-expanded="false" aria-controls="Login_Two">
+                    <b class="get">GET</b>/login/validatoken
+                  </button>
+                </h2>
+                <div id="Login_Two" class="accordion-collapse collapse" aria-labelledby="LoginTwo" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                      
+                      <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                          <code class="prettyprint">
+                          </code>
+                      </pre> 
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>  
+
+        <div class="box">   
+            <h4>API - Seguradora </h4>
+            <div class="accordion" id="accordionFlushExample" style="width: 100%;">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="UserOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#api_One" aria-expanded="false" aria-controls="api_One">
+                    <b class="get">GET</b>/ApiSeguradoras/listar-api-por-pessoa
+                  </button>
+                </h2>
+                <div id="api_One" class="accordion-collapse collapse" aria-labelledby="UserOne" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                      <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                          <code class="prettyprint">
+                            {
+                              "status": "success",
+                              "data": {
+                                  "paginacao": {
+                                      "pagiana_atual": 1,
+                                      "total_pagina": 1,
+                                      "total": "2"
+                                  },
+                                  "result": [
+                                      {
+                                          "id": "2",
+                                          "nome": "NOME - API",
+                                          "homologacao": "S",
+                                          "json": "arquivos/pessoas/json/20220902131662132317_dado.json",
+                                          "id_seguradora_produto": "3",
+                                          "pessoas": {
+                                              "id": "3",
+                                              "nome": "NOME SEGUROS GERAIS S.A.",
+                                              "email": "TRIBUTOS@NOME.COM.BR",
+                                              "celular": "(16) 98100-3563",
+                                              "celular2": null,
+                                              "telefone": null,
+                                              "endereco": "AV DAS NACOES UNIDAS",
+                                              "numero": "14261",
+                                              "complemento": "ANDAR 17 AO 21 ALA A",
+                                              "bairro": "VILA GERTRUDES",
+                                              "cep": "04794-000",
+                                              "cidade": "SAO PAULO",
+                                              "estado": "SP",
+                                              "cpf_cnpj": "255.721.398-24",
+                                              "rg_ie": "29.585.665-5",
+                                              "observacao": "testestestestse",
+                                              "susep": "123456",
+                                              "tipo_pessoa": "S",
+                                              "ip": "127.0.0.1",
+                                              "data_now": "2022-09-01 14:09:23",
+                                              "id_usuario_now": null
+                                          }
+                                      },
+                                      {
+                                        .......
+                                      }
+                                  ],
+                                  "navegacao": {
+                                      "link": [
+                                          {
+                                              "url": "pag=1",
+                                              "label": 1,
+                                              "active": "disabled"
+                                          }
+                                      ],
+                                      "from": 25,
+                                      "per_page": 25,
+                                      "total": "2"
+                                  }
+                              }
+                          }
+                          </code>
+                      </pre> 
+          
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="UserTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#api_Two" aria-expanded="false" aria-controls="api_Two">
+                    <b class="get">GET</b>/ApiSeguradoras/listar-apiId/1
+                  </button>
+                </h2>
+                <div id="api_Two" class="accordion-collapse collapse" aria-labelledby="UserTwo" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                      
+                      <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                          <code class="prettyprint">
+                            {
+                              "status": "success",
+                              "data": {
+                                  "id": "2",
+                                  "nome": "NOME - API",
+                                  "id_seguradora_produto": "3",
+                                  "homologacao": "S",
+                                  "json": "arquivos/pessoas/json/20220902131662132317_dado.json",
+                                  "ip": "127.0.0.1",
+                                  "data_now": "2022-09-02 15:09:17",
+                                  "id_usuario_now": "2",
+                                  "seguradoras": [
+                                      {
+                                          "id": "3",
+                                          "id_pessoa": "3"
+                                      }
+                                  ],
+                                  "seguradoras_corretores_susep": []
+                              }
+                          }
+                          </code>
+                      </pre> 
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="UserThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#api_Three" aria-expanded="false" aria-controls="api_Three">
+                    <b class="post">POST</b>/ApiSeguradoras/atualizar-api
+                  </button>
+                </h2>
+                <div id="api_Three" class="accordion-collapse collapse" aria-labelledby="UserThree" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                      <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                          <code class="prettyprint">
+                          </code>
+                      </pre> 
+          
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="UserFor">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#api_For" aria-expanded="false" aria-controls="api_For">
+                      <b class="get">GET</b>/ApiSeguradoras/deletar-api
+                    </button>
+                  </h2>
+                  <div id="api_For" class="accordion-collapse collapse" aria-labelledby="UserFor" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                          <code class="prettyprint">
+                          </code>
+                      </pre> 
+            
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="UserFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#api_Five" aria-expanded="false" aria-controls="api_Five">
+                      <b class="post">POST</b>/ApiSeguradoras/cadastro-api
+                    </button>
+                  </h2>
+                  <div id="api_Five" class="accordion-collapse collapse" aria-labelledby="UserFive" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                          <code class="prettyprint">
+                          </code>
+                      </pre> 
+            
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>     
+            
+        <div class="box"> 
+            <h4>Buscar imagem</h4>   
+            <div class="accordion" id="accordionFlushExample" style="width: 100%;">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="ImagemOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Imagem_One" aria-expanded="false" aria-controls="Imagem_One">
+                    <b class="get">GET</b>/imagens/buscar-imagem-pessoa/1
+                  </button>
+                </h2>
+                <div id="Imagem_One" class="accordion-collapse collapse" aria-labelledby="ImagemOne" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                      <pre style=" background: #303030;color: #8bc34a;width: 100%; margin-top: 2px;">
+                          <code class="prettyprint">
+                            {
+                              "status": "success",
+                              "data": {
+                                  "id": "63",
+                                  "id_pessoas": "2",
+                                  "path": "arquivos/pessoas/2022/09/2/3a8db9ea6533d5e019c8a42965329659.jpg",
+                                  "thumbnail": "arquivos/pessoas/miniatura/2022/09/2/3a8db9ea6533d5e019c8a42965329659.jpg",
+                                  "nome": "3a8db9ea6533d5e019c8a42965329659.jpg"
+                              }
+                          }
+                          </code>
+                      </pre> 
+          
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>    
+    </div>
+</body>
+</html>

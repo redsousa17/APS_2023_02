@@ -1,0 +1,8 @@
+{
+    "Error": 5,
+    "orcamento": "Erro ao buscar orçamento",
+    "result": {
+        "faultcode": "p484:portoSeguroFaultInfoType",
+        "faultstring": "br.com.portoseguro.www.PortoSeguroFaultInfoType"
+    }
+}

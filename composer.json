@@ -1,0 +1,36 @@
+{
+    "name": "ksis/api",
+    "description": "ksis api rest full integracao seguradoras",
+    "autoload": {
+        "psr-4": {
+            "Cronos_sistema\\": "Cronos_sistema/",
+            "Cronos_sistema\\Config\\": "Cronos_sistema/Config"
+        },
+        "files":[
+            "config.php"
+      ]
+    },
+    "authors": [
+        {
+            "name": "ksis-seguros",
+            "email": "desenvolvedor14@ksi.com.br"
+        }
+    ],
+    "require": {
+        "php": ">=7.3.33",
+        "vlucas/phpdotenv": "^5.4",
+        "firebase/php-jwt": "^5.3",
+        "illuminate/database": "^8.83",
+        "illuminate/pagination": "^8.83",
+        "illuminate/container": "^8.83",
+        "illuminate/support": "^8.83",
+        "illuminate/contracts": "^8.83",
+        "larapack/dd": "^1.1",
+        "smmoosavi/php-gettext": "^1.0",
+        "illuminate/events": "^8.83",
+        "nesbot/carbon": "^2.71",
+        "monolog/monolog": "^3.4",
+        "jenssegers/blade": "^1.4"
+
+    }
+}
